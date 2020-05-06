@@ -1,5 +1,3 @@
-console.log('Client side');
-
 const weatherForm = document.querySelector('form');
 const search = document.querySelector('input');
 const messageOne = document.querySelector('#one');
@@ -11,17 +9,15 @@ weatherForm.addEventListener('submit', (e) => {
   messageOne.textContent = 'Loading...';
   messageTwo.textContent = '';
 
-  fetch('http://localhost:3000/weather?address=' + location).then(
-    (response) => {
-      response.json().then((data) => {
-        if (data.error) {
-          messageOne.innerHTML = data.error;
-        } else {
-          messageOne.innerHTML =
-            data.humidity + ' ' + '<small>' + data.location + '</small>';
-          messageTwo.innerHTML = data.forecast[0].description;
-        }
-      });
-    }
-  );
+  fetch('/weather?address=' + location).then((response) => {
+    response.json().then((data) => {
+      if (data.error) {
+        messageOne.innerHTML = data.error;
+      } else {
+        messageOne.innerHTML =
+          data.humidity + ' ' + '<small>' + data.location + '</small>';
+        messageTwo.innerHTML = data.forecast[0].description;
+      }
+    });
+  });
 });
