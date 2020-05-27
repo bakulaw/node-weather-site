@@ -27,9 +27,11 @@ app.get('', (req, res) => {
   });
 });
 
-/*app.get('/help', (req, res) => {
-  res.send('Hello Help');
-});*/
+app.get('/login', (req, res) => {
+  res.render('login', {
+    title: 'Login',
+  });
+});
 
 app.get('/about', (req, res) => {
   res.render('about', {

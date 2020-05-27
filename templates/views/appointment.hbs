@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Registration</title>
+    <link rel="icon" href="/img/ritm.png" />
+    <!-- <link rel="stylesheet" href="/css/styles.css" />-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <!--    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>-->
+</head>
+
+<body class="layout-documentation page-layout">
+
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+                <img src="/img/logo2.png" width="30">
+                <h5>CoVID-19 Appointment System</h5>
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+
+
+
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+
+            <div class="columns is-mobile">
+                <div class="column is-half is-offset-one-quarter">
+                    <form id="frm-appointment">
+                        <h1 class="title">Set an appointment</h1>
+
+                        <div class="notification is-warning">
+                            <strong>Note:</strong> Due to limited number of medical staff, RITM can only accomodate
+                            ten(10) appointments per day.
+                        </div>
+                        <div class="field">
+                            <label class="label">Last Name</label>
+                            <div class="control">
+                                <input class="input pangalan" type="text" required placeholder="Last name"
+                                    name="lastname" id="lastname">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">First Name</label>
+                            <div class="control">
+                                <input class="input pangalan" type="text" required placeholder="First name"
+                                    name="firstname" id="firstname">
+
+                                </span>
+                                <span class="icon is-small is-right">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </div>
+
+                        </div>
+                        <label class="label">Birthdate</label>
+                        <div class="field is-grouped">
+
+                            <div class="control">
+                                <input class="input pangalan" required type="date" name="birthdate" id="birthdate">
+                            </div>
+
+                            <div class="control">
+
+                                <input class="input" type="text" name="age" id="age" placeholder="Age in years">
+
+                                <i class="fas fa-envelope"></i>
+                                </span>
+                                <span class="icon is-small is-right">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </span>
+                            </div>
+
+
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <label class="label">Sex:</label>
+                                <div class="select">
+                                    <select name="sex" id="sex" required>
+                                        <option>Select sex</option>
+                                        <option value="M">Male</option>
+                                        <option value="F">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="field">
+                            <label class="label">Email</label>
+                            <div class="control has-icons-left has-icons-right">
+                                <input class="input" type="email"
+                                    placeholder="Please provide valid email to confirm your appointment." name="email"
+                                    id="email">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                                <span class="icon is-small is-right">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="field">
+                            <label class="label">Address</label>
+                            <div class="control">
+                                <textarea class="textarea" placeholder="Textarea" name="address"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Reason for COVID-19 testing</label>
+                            <div class="control">
+                                <input class="input" type="text" required name="reason" id="reason">
+
+                                </span>
+                                <span class="icon is-small is-right">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </div>
+
+                            <div class="field">
+                                <label class="label">Date of appointment</label>
+                                <div class="control">
+
+                                    <div class="control">
+                                        <input class="input" type="date" name="doAppointment" id="doAppointment">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field is-grouped">
+                                <div class="control">
+                                    <button class="button is-link" id="btn-submit" disabled>Submit</button>
+                                </div>
+                                <!--   <div class="control">
+                                    <button class="button is-link is-light">Cancel</button>
+                                </div>-->
+                            </div>
+                    </form>
+                    <hr />
+                    <article style="display:none;" id="msg" class="message is-danger">
+                        <div class="message-header">
+                            <p>Error</p>
+                        </div>
+                        <div id="text-msg" class="message-body"></div>
+                </div>
+
+                </article>
+            </div>
+        </div>
+    </section>
+    </div>
+    {{>footer}}
+    <1--<script src="/js/appointment.js">
+        </script>-->
+</body>
+
+</html>
